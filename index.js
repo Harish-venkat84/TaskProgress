@@ -8,9 +8,13 @@ if (localData === null) {
 
 const todo = document.querySelector(".cards.todo");
 const pending = document.querySelector(".cards.pending");
+const devCompleted = document.querySelector(".cards.dev-completed");
+const uatPushed = document.querySelector(".cards.uat-pushed");
+const uatTested = document.querySelector(".cards.uat-tested");
+const uatFailed = document.querySelector(".cards.uat-failed");
 const completed = document.querySelector(".cards.completed");
 
-const taskbox = [todo, pending, completed];
+const taskbox = [todo, pending, devCompleted, uatPushed, uatTested, uatFailed, completed];
 
 function addTaskCard(task, index) {
   const element = document.createElement("form");

@@ -60,7 +60,7 @@ export default class Kanban {
   static getAllTask() {
     const data = read();
     columnCount();
-    return [data[0].tasks, data[1].tasks, data[2].tasks];
+    return [data[0].tasks, data[1].tasks, data[2].tasks, data[3].tasks, data[4].tasks, data[5].tasks, data[6].tasks];
   }
 }
 
@@ -79,11 +79,20 @@ function columnCount() {
 
   const todo = document.querySelector("span.todo");
   const pending = document.querySelector("span.pending");
+  const devCompleted = document.querySelector("span.dev-completed");
+  const uatPushed = document.querySelector("span.uat-pushed");
+  const uatTested = document.querySelector("span.uat-tested");
+  const uatFailed = document.querySelector("span.uat-failed");
+
   const completed = document.querySelector("span.completed");
 
   todo.textContent = data[0].tasks.length;
   pending.textContent = data[1].tasks.length;
-  completed.textContent = data[2].tasks.length;
+  devCompleted.textContent = data[2].tasks.length;
+  uatPushed.textContent = data[3].tasks.length;
+  uatTested.textContent = data[4].tasks.length;
+  uatFailed.textContent = data[5].tasks.length;
+  completed.textContent = data[6].tasks.length;
 }
 
 // Kanban.insertTask(0, "Adding new task");
