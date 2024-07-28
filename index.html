@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./Images/favicon(1).ico" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Kanban Project</title>
+  </head>
+  <body>
+    <main>
+      <div class="outer-wrap">
+        <div class="inner-wrap">
+          <section class="heading">
+            <p class="title">Kanban</p>
+            <p class="subtitle">Manage your tasks</p>
+          </section>
+          <section class="kanban">
+            <div class="taskbox">
+              <div class="title">
+                <p>ToDo</p>
+                <span class="todo">2</span>
+              </div>
+              <div class="cards todo" data-id="0"></div>
+              <form class="add">
+                <input type="text" name="task" placeholder="Task Name" autocomplete="off" maxlength="30" value="" />
+                <button class="bi bi-plus" data-id="0" name="submit"></button>
+              </form>
+            </div>
+            <div class="taskbox">
+              <div class="title">
+                <p>In Progress</p>
+                <span class="pending">2</span>
+              </div>
+              <div class="cards pending" data-id="1"></div>
+              <form class="add">
+                <input type="text" name="task" placeholder="Task Name" autocomplete="off" maxlength="30" value="" />
+                <button class="bi bi-plus" data-id="1" name="submit"></button>
+              </form>
+            </div>
+            <div class="taskbox">
+              <div class="title">
+                <p>Completed</p>
+                <span class="completed">2</span>
+              </div>
+              <div class="cards completed" data-id="2"></div>
+              <form class="add">
+                <input type="text" name="task" placeholder="Task Name" autocomplete="off" maxlength="30" value="" />
+                <button class="bi bi-plus" data-id="2" name="submit"></button>
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
